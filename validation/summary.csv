@@ -1,0 +1,10 @@
+experiment_id,cases,baseline_compliance_pass,production_compliance_pass,baseline_integrity_rate,production_integrity_rate
+Q1-E01,6,4,5,66.7,83.3
+Q1-E02,4,2,4,50.0,100.0
+Q2-E01,4,2,4,50.0,100.0
+Q2-E02,4,1,4,25.0,100.0
+Q3-E01,4,3,4,75.0,100.0
+Q3-E02,4,2,4,50.0,100.0
+Q4-E01,4,2,4,50.0,100.0
+Q4-E02,4,2,4,50.0,100.0
+

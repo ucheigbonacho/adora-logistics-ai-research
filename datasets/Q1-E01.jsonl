@@ -1,0 +1,120 @@
+{"case_id": "Q1-E01-0000", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "road closed ahead"}}
+{"case_id": "Q1-E01-0001", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "road closed ahead"}}
+{"case_id": "Q1-E01-0002", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0003", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0004", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "please reroute"}}
+{"case_id": "Q1-E01-0005", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "please reroute"}}
+{"case_id": "Q1-E01-0006", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "please reroute"}}
+{"case_id": "Q1-E01-0007", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "traffic bad"}}
+{"case_id": "Q1-E01-0008", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "road closed ahead"}}
+{"case_id": "Q1-E01-0009", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "traffic bad"}}
+{"case_id": "Q1-E01-0010", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0011", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0012", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "traffic bad"}}
+{"case_id": "Q1-E01-0013", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "repeat that"}}
+{"case_id": "Q1-E01-0014", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "repeat that"}}
+{"case_id": "Q1-E01-0015", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "repeat that"}}
+{"case_id": "Q1-E01-0016", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "repeat that"}}
+{"case_id": "Q1-E01-0017", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "repeat that"}}
+{"case_id": "Q1-E01-0018", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0019", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "road closed ahead"}}
+{"case_id": "Q1-E01-0020", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0021", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "repeat that"}}
+{"case_id": "Q1-E01-0022", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "please reroute"}}
+{"case_id": "Q1-E01-0023", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "road closed ahead"}}
+{"case_id": "Q1-E01-0024", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "traffic bad"}}
+{"case_id": "Q1-E01-0025", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "road closed ahead"}}
+{"case_id": "Q1-E01-0026", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "please reroute"}}
+{"case_id": "Q1-E01-0027", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "repeat that"}}
+{"case_id": "Q1-E01-0028", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "alternate route needed"}}
+{"case_id": "Q1-E01-0029", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "please reroute"}}
+{"case_id": "Q1-E01-0030", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "alternate route needed"}}
+{"case_id": "Q1-E01-0031", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "repeat that"}}
+{"case_id": "Q1-E01-0032", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "road closed ahead"}}
+{"case_id": "Q1-E01-0033", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "alternate route needed"}}
+{"case_id": "Q1-E01-0034", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "traffic bad"}}
+{"case_id": "Q1-E01-0035", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0036", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "road closed ahead"}}
+{"case_id": "Q1-E01-0037", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "please reroute"}}
+{"case_id": "Q1-E01-0038", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "please reroute"}}
+{"case_id": "Q1-E01-0039", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "repeat that"}}
+{"case_id": "Q1-E01-0040", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "please reroute"}}
+{"case_id": "Q1-E01-0041", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "traffic bad"}}
+{"case_id": "Q1-E01-0042", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0043", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0044", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "road closed ahead"}}
+{"case_id": "Q1-E01-0045", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "please reroute"}}
+{"case_id": "Q1-E01-0046", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "repeat that"}}
+{"case_id": "Q1-E01-0047", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "traffic bad"}}
+{"case_id": "Q1-E01-0048", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "repeat that"}}
+{"case_id": "Q1-E01-0049", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0050", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0051", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "please reroute"}}
+{"case_id": "Q1-E01-0052", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "please reroute"}}
+{"case_id": "Q1-E01-0053", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "repeat that"}}
+{"case_id": "Q1-E01-0054", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "please reroute"}}
+{"case_id": "Q1-E01-0055", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "road closed ahead"}}
+{"case_id": "Q1-E01-0056", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "traffic bad"}}
+{"case_id": "Q1-E01-0057", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "please reroute"}}
+{"case_id": "Q1-E01-0058", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0059", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "traffic bad"}}
+{"case_id": "Q1-E01-0060", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "road closed ahead"}}
+{"case_id": "Q1-E01-0061", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0062", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "please reroute"}}
+{"case_id": "Q1-E01-0063", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0064", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "traffic bad"}}
+{"case_id": "Q1-E01-0065", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "road closed ahead"}}
+{"case_id": "Q1-E01-0066", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "traffic bad"}}
+{"case_id": "Q1-E01-0067", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "alternate route needed"}}
+{"case_id": "Q1-E01-0068", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "repeat that"}}
+{"case_id": "Q1-E01-0069", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "road closed ahead"}}
+{"case_id": "Q1-E01-0070", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0071", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "road closed ahead"}}
+{"case_id": "Q1-E01-0072", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "repeat that"}}
+{"case_id": "Q1-E01-0073", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "road closed ahead"}}
+{"case_id": "Q1-E01-0074", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "please reroute"}}
+{"case_id": "Q1-E01-0075", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "alternate route needed"}}
+{"case_id": "Q1-E01-0076", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "please reroute"}}
+{"case_id": "Q1-E01-0077", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "please reroute"}}
+{"case_id": "Q1-E01-0078", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0079", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "traffic bad"}}
+{"case_id": "Q1-E01-0080", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "alternate route needed"}}
+{"case_id": "Q1-E01-0081", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "road closed ahead"}}
+{"case_id": "Q1-E01-0082", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0083", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "traffic bad"}}
+{"case_id": "Q1-E01-0084", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "repeat that"}}
+{"case_id": "Q1-E01-0085", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0086", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0087", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "repeat that"}}
+{"case_id": "Q1-E01-0088", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "please reroute"}}
+{"case_id": "Q1-E01-0089", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "alternate route needed"}}
+{"case_id": "Q1-E01-0090", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "road closed ahead"}}
+{"case_id": "Q1-E01-0091", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "please reroute"}}
+{"case_id": "Q1-E01-0092", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "repeat that"}}
+{"case_id": "Q1-E01-0093", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "traffic bad"}}
+{"case_id": "Q1-E01-0094", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "alternate route needed"}}
+{"case_id": "Q1-E01-0095", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "road closed ahead"}}
+{"case_id": "Q1-E01-0096", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "road closed ahead"}}
+{"case_id": "Q1-E01-0097", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0098", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "repeat that"}}
+{"case_id": "Q1-E01-0099", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "repeat that"}}
+{"case_id": "Q1-E01-0100", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0101", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "traffic bad"}}
+{"case_id": "Q1-E01-0102", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0103", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "alternate route needed"}}
+{"case_id": "Q1-E01-0104", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "road closed ahead"}}
+{"case_id": "Q1-E01-0105", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "repeat that"}}
+{"case_id": "Q1-E01-0106", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "repeat that"}}
+{"case_id": "Q1-E01-0107", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "traffic bad"}}
+{"case_id": "Q1-E01-0108", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "road closed ahead"}}
+{"case_id": "Q1-E01-0109", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0110", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "repeat that"}}
+{"case_id": "Q1-E01-0111", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "please reroute"}}
+{"case_id": "Q1-E01-0112", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "repeat that"}}
+{"case_id": "Q1-E01-0113", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0114", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "traffic bad"}}
+{"case_id": "Q1-E01-0115", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "please reroute"}}
+{"case_id": "Q1-E01-0116", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0117", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "can you hear me"}}
+{"case_id": "Q1-E01-0118", "expected": "clarify", "experiment_id": "Q1-E01", "input": {"utterance": "traffic bad"}}
+{"case_id": "Q1-E01-0119", "expected": "reroute", "experiment_id": "Q1-E01", "input": {"utterance": "please reroute"}}

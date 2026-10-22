@@ -1,0 +1,35 @@
+experiment_id,profile_id,input,target_pipeline_state,computed_baseline_state,computed_production_state,baseline_integrity_pass,production_integrity_pass
+Q1-E01,Q1-E01-V01,"{""utterance"": ""road closed ahead""}",authorize_intent,authorize_intent,authorize_intent,1,1
+Q1-E01,Q1-E01-V02,"{""utterance"": ""please find another road""}",authorize_intent,authorize_intent,exception_flag,1,0
+Q1-E01,Q1-E01-V03,"{""utterance"": ""can you hear me""}",exception_flag,exception_flag,exception_flag,1,1
+Q1-E01,Q1-E01-V04,"{""utterance"": ""I heard the road is closed?""}",exception_flag,authorize_intent,exception_flag,0,1
+Q1-E01,Q1-E01-V05,"{""utterance"": ""alternate route""}",authorize_intent,exception_flag,authorize_intent,0,1
+Q1-E01,Q1-E01-V06,"{""utterance"": ""route may be blocked""}",exception_flag,exception_flag,exception_flag,1,1
+Q1-E02,Q1-E02-V01,"{""confirmed"": true, ""connection"": ""restored"", ""pending"": true}",link_connected,link_connected,link_connected,1,1
+Q1-E02,Q1-E02-V02,"{""confirmed"": false, ""connection"": ""restored"", ""pending"": true}",link_disconnected,link_connected,link_disconnected,0,1
+Q1-E02,Q1-E02-V03,"{""confirmed"": true, ""connection"": ""restored"", ""pending"": false}",link_disconnected,link_connected,link_disconnected,0,1
+Q1-E02,Q1-E02-V04,"{""confirmed"": true, ""connection"": ""lost"", ""pending"": true}",link_disconnected,link_disconnected,link_disconnected,1,1
+Q2-E01,Q2-E01-V01,"{""available"": true, ""equipment_match"": true, ""hours_left"": 5, ""hours_needed"": 4}",assignment_authorized,assignment_authorized,assignment_authorized,1,1
+Q2-E01,Q2-E01-V02,"{""available"": true, ""equipment_match"": false, ""hours_left"": 5, ""hours_needed"": 4}",resource_constraint_reject,assignment_authorized,resource_constraint_reject,0,1
+Q2-E01,Q2-E01-V03,"{""available"": true, ""equipment_match"": true, ""hours_left"": 2, ""hours_needed"": 4}",resource_constraint_reject,assignment_authorized,resource_constraint_reject,0,1
+Q2-E01,Q2-E01-V04,"{""available"": false, ""equipment_match"": true, ""hours_left"": 5, ""hours_needed"": 4}",resource_constraint_reject,resource_constraint_reject,resource_constraint_reject,1,1
+Q2-E02,Q2-E02-V01,"{""destination"": ""Toronto"", ""trailer_class"": ""dry""}",schema_validation_pass,schema_validation_pass,schema_validation_pass,1,1
+Q2-E02,Q2-E02-V02,"{""destination"": """", ""trailer_class"": ""dry""}",clarification_required,schema_validation_pass,clarification_required,0,1
+Q2-E02,Q2-E02-V03,"{""destination"": ""Toronto"", ""trailer_class"": """"}",clarification_required,schema_validation_pass,clarification_required,0,1
+Q2-E02,Q2-E02-V04,"{""destination"": """", ""trailer_class"": """"}",clarification_required,schema_validation_pass,clarification_required,0,1
+Q3-E01,Q3-E01-V01,"{""appointment_min"": 70, ""eta_min"": 100, ""freshness_sec"": 30}",delay_alert_triggered,delay_alert_triggered,delay_alert_triggered,1,1
+Q3-E01,Q3-E01-V02,"{""appointment_min"": 70, ""eta_min"": 100, ""freshness_sec"": 300}",stale_telemetry_suppressed,delay_alert_triggered,stale_telemetry_suppressed,0,1
+Q3-E01,Q3-E01-V03,"{""appointment_min"": 70, ""eta_min"": 75, ""freshness_sec"": 20}",stale_telemetry_suppressed,stale_telemetry_suppressed,stale_telemetry_suppressed,1,1
+Q3-E01,Q3-E01-V04,"{""appointment_min"": 70, ""eta_min"": 90, ""freshness_sec"": 120}",delay_alert_triggered,delay_alert_triggered,delay_alert_triggered,1,1
+Q3-E02,Q3-E02-V01,"{""scheduled_stop"": false, ""stopped_min"": 90}",detention_billing_flag,detention_billing_flag,detention_billing_flag,1,1
+Q3-E02,Q3-E02-V02,"{""scheduled_stop"": true, ""stopped_min"": 90}",manifest_stop_noop,detention_billing_flag,manifest_stop_noop,0,1
+Q3-E02,Q3-E02-V03,"{""scheduled_stop"": false, ""stopped_min"": 30}",manifest_stop_noop,manifest_stop_noop,manifest_stop_noop,1,1
+Q3-E02,Q3-E02-V04,"{""scheduled_stop"": true, ""stopped_min"": 61}",manifest_stop_noop,detention_billing_flag,manifest_stop_noop,0,1
+Q4-E01,Q4-E01-V01,"{""destination_verified"": true, ""eta_delta_min"": 30, ""recipient_verified"": true}",notification_broadcast_authorized,notification_broadcast_authorized,notification_broadcast_authorized,1,1
+Q4-E01,Q4-E01-V02,"{""destination_verified"": true, ""eta_delta_min"": 30, ""recipient_verified"": false}",uncommitted_state_suppression,notification_broadcast_authorized,uncommitted_state_suppression,0,1
+Q4-E01,Q4-E01-V03,"{""destination_verified"": false, ""eta_delta_min"": 30, ""recipient_verified"": true}",uncommitted_state_suppression,notification_broadcast_authorized,uncommitted_state_suppression,0,1
+Q4-E01,Q4-E01-V04,"{""destination_verified"": true, ""eta_delta_min"": 10, ""recipient_verified"": true}",uncommitted_state_suppression,uncommitted_state_suppression,uncommitted_state_suppression,1,1
+Q4-E02,Q4-E02-V01,"{""event_key"": ""a"", ""seen_keys"": []}",transaction_committed,transaction_committed,transaction_committed,1,1
+Q4-E02,Q4-E02-V02,"{""event_key"": ""a"", ""seen_keys"": [""a""]}",idempotency_filter_match,transaction_committed,idempotency_filter_match,0,1
+Q4-E02,Q4-E02-V03,"{""event_key"": ""b"", ""seen_keys"": [""a""]}",transaction_committed,transaction_committed,transaction_committed,1,1
+Q4-E02,Q4-E02-V04,"{""event_key"": ""b"", ""seen_keys"": [""b"", ""a""]}",idempotency_filter_match,transaction_committed,idempotency_filter_match,0,1
