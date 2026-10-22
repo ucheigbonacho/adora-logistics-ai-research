@@ -4,14 +4,15 @@ Description: Enforces deterministic constraints, sequence filters, and multi-nod
              idempotency controls across production telematics ingestion profiles.
 """
 
+from src.authorization import evaluate_dispatch_request
+
 def execute_routing_decision(experiment_id: str, record_payload: dict) -> str:
     """
     Evaluates runtime telematics records against production context-aware gateway rules.
     """
     if experiment_id == 'Q1-E01':
-        phrase = record_payload['utterance'].lower()
-        return 'authorize_intent' if any(x in phrase for x in ('reroute', 'road closed', 'alternate route')) else 'exception_flag'
-        
+        return evaluate_dispatch_request(record_payload)
+
     if experiment_id == 'Q1-E02':
         return 'link_connected' if record_payload['connection'] == 'restored' and record_payload['pending'] and record_payload['confirmed'] else 'link_disconnected'
         
