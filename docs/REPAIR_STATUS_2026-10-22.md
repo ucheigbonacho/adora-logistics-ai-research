@@ -33,3 +33,10 @@ python -m validation.run_validation
 ```
 
 No production deployment or final readiness is claimed by this branch.
+
+## Additional repairs in this branch
+- Q1-E01 now classifies route inquiries as proposals rather than execution authorization. The structured flags remain **untrusted caller-supplied values** until a real issuer is integrated.
+- `src.trusted_gateway` provides HMAC claim verification and SQLite reservation as an **isolated** component, not a production executor. It is not connected to Q1-E01 or an identity provider.
+- EXP-09 scenario 09-09 was explicitly revised for fail-closed behavior; its original expectation is preserved in `experiments/EXP-09/09-09_original_expectation.json`. This is a changed acceptance criterion, **not** a passing result against the original criterion.
+- Local verification of the original uploaded repository plus these repair components: `python -m unittest discover -s tests -v` returned **20 tests passed** after the EXP-09 acceptance revision. GitHub CI has not independently confirmed this branch. The original validation results remain unreconciled.
+- Outstanding: trusted issuer, identity and tenant boundaries, key rotation, revocation, durable outbox, receiver acknowledgement, production reconciliation, SQLite resource warning cleanup, and independent evaluation.
