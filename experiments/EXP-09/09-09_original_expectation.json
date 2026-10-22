@@ -1,0 +1,33 @@
+{
+  "id": "09-09",
+  "description": "multi-session concurrent transactional isolation",
+  "events": [
+    {
+      "type": "dispatch_intent",
+      "text": "route_optimized",
+      "action_id": "TXN-A01"
+    },
+    {
+      "type": "operator_confirm",
+      "action_id": "TXN-A01"
+    },
+    {
+      "type": "dispatch_intent",
+      "text": "alternate_gating",
+      "action_id": "TXN-A02"
+    },
+    {
+      "type": "operator_confirm",
+      "action_id": "TXN-A02"
+    }
+  ],
+  "expected": {
+    "gps_seq": -1,
+    "gps_position": null,
+    "applied": [
+      "TXN-A01",
+      "TXN-A02"
+    ],
+    "exception_flag": 0
+  }
+}
