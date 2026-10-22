@@ -1,0 +1,25 @@
+scenario,description,engine_strategy,pass_status,gps_correct,actions_correct,exception_handling_pass,duplicate_actions,expected_actions,observed_actions
+09-01,clean authorized route,unprotected_stream,1,1,1,1,0,"[""TXN-A01""]","[""TXN-A01""]"
+09-01,clean authorized route,idempotent_gating,1,1,1,1,0,"[""TXN-A01""]","[""TXN-A01""]"
+09-02,ambiguous question plus duplicate replay,unprotected_stream,0,0,0,0,0,[],["[""TXN-A01""]"
+09-02,ambiguous question plus duplicate replay,idempotent_gating,1,1,1,1,0,[],[]
+09-03,authorized action followed by two retries,unprotected_stream,0,1,0,1,2,"[""TXN-A01""]","[""TXN-A01"", ""TXN-A01"", ""TXN-A01""]"
+09-03,authorized action followed by two retries,idempotent_gating,1,1,1,1,0,"[""TXN-A01""]","[""TXN-A01""]"
+09-04,out of order GPS update,unprotected_stream,0,0,1,1,0,[],[]
+09-04,out of order GPS update,idempotent_gating,1,1,1,1,0,[],[]
+09-05,confirmation arrives while offline then valid retry,unprotected_stream,0,1,0,1,1,"[""TXN-A01""]","[""TXN-A01"", ""TXN-A01""]"
+09-05,confirmation arrives while offline then valid retry,idempotent_gating,1,1,1,1,0,"[""TXN-A01""]","[""TXN-A01""]"
+09-06,uncertain speech should not authorize,unprotected_stream,0,1,0,0,0,[],["[""TXN-A01""]"
+09-06,uncertain speech should not authorize,idempotent_gating,1,1,1,1,0,[],[]
+09-07,repeated confirm without pending action,unprotected_stream,0,1,0,1,1,"[""TXN-A01""]","[""TXN-A01"", ""TXN-A01""]"
+09-07,repeated confirm without pending action,idempotent_gating,1,1,1,1,0,"[""TXN-A01""]","[""TXN-A01""]"
+09-08,replay of uncommitted action,unprotected_stream,0,1,0,1,0,[],["[""TXN-A01""]"
+09-08,replay of uncommitted action,idempotent_gating,1,1,1,1,0,[],[]
+09-09,two distinct authorized actions,unprotected_stream,1,1,1,1,0,"[""TXN-A01"", ""TXN-A02""]","[""TXN-A01"", ""TXN-A02""]"
+09-09,two distinct authorized actions,idempotent_gating,1,1,1,1,0,"[""TXN-A01"", ""TXN-A02""]","[""TXN-A01"", ""TXN-A02""]"
+09-10,"compound disruption, valid confirmed action",unprotected_stream,0,1,0,1,1,"[""TXN-A01""]","[""TXN-A01"", ""TXN-A01""]"
+09-10,"compound disruption, valid confirmed action",idempotent_gating,1,1,1,1,0,"[""TXN-A01""]","[""TXN-A01""]"
+09-11,"compound disruption, ambiguous speech",unprotected_stream,0,0,0,0,0,[],["[""TXN-A01""]"
+09-11,"compound disruption, ambiguous speech",idempotent_gating,1,1,1,1,0,[],[]
+09-12,confirmation for wrong action ID,unprotected_stream,0,1,0,1,0,"[""TXN-A01""]","[""TXN-A02"", ""TXN-A01""]"
+09-12,confirmation for wrong action ID,idempotent_gating,1,1,1,1,0,"[""TXN-A01""]","[""TXN-A01""]"

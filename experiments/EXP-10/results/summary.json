@@ -1,0 +1,16 @@
+[
+  {
+    "engine_strategy": "unprotected_stream",
+    "profiles_evaluated": 100,
+    "state_compliance_pass": 0,
+    "duplicate_actions_executed": 1100,
+    "sequence_sync_errors": 92
+  },
+  {
+    "engine_strategy": "idempotent_gating",
+    "profiles_evaluated": 100,
+    "state_compliance_pass": 100,
+    "duplicate_actions_executed": 0,
+    "sequence_sync_errors": 0
+  }
+]

@@ -1,0 +1,9 @@
+experiment_id,cases,state_compliance_pass,sync_validation_exceptions,pipeline_integrity_rate,median_latency_ns
+Q1-E01,120,120,0,100.0,470
+Q1-E02,120,120,0,100.0,190
+Q2-E01,120,120,0,100.0,180
+Q2-E02,120,120,0,100.0,200
+Q3-E01,120,120,0,100.0,230
+Q3-E02,120,120,0,100.0,210
+Q4-E01,120,120,0,100.0,231
+Q4-E02,120,120,0,100.0,230

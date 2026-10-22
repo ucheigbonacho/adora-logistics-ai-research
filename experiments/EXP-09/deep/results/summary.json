@@ -1,0 +1,35 @@
+[
+  {
+    "strategy": "naive",
+    "trials": 500,
+    "state_correct": 0,
+    "duplicates": 500,
+    "lost_actions": 0,
+    "stale_accepted": 1257,
+    "unsafe_ambiguous": 500,
+    "dropped_confirms": 500,
+    "median_recovery_ms": null
+  },
+  {
+    "strategy": "sequence_guard",
+    "trials": 500,
+    "state_correct": 0,
+    "duplicates": 500,
+    "lost_actions": 0,
+    "stale_accepted": 0,
+    "unsafe_ambiguous": 0,
+    "dropped_confirms": 500,
+    "median_recovery_ms": null
+  },
+  {
+    "strategy": "confirmed_idempotent",
+    "trials": 500,
+    "state_correct": 500,
+    "duplicates": 0,
+    "lost_actions": 0,
+    "stale_accepted": 0,
+    "unsafe_ambiguous": 0,
+    "dropped_confirms": 0,
+    "median_recovery_ms": 3099.5
+  }
+]

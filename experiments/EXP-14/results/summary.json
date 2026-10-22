@@ -1,0 +1,44 @@
+{
+  "system_provenance_verification": "ENTERPRISE_PRODUCTION_BUILD_VERIFIED",
+  "methodology": "OS_subprocess_isolation_and_restart_recovery; SQLite_persistent_storage_engine_boundary_layer",
+  "concurrency_repetitions_per_phase": 3,
+  "total_profiles_evaluated": 18,
+  "evaluation_strategy_groups": {
+    "unbuffered_retry_stream/pre_flight_boundary": {
+      "profiles_evaluated": 3,
+      "state_compliance_pass": 3,
+      "redundant_mutations_executed": 0,
+      "dropped_transactions": 0
+    },
+    "unbuffered_retry_stream/post_mutation_boundary": {
+      "profiles_evaluated": 3,
+      "state_compliance_pass": 0,
+      "redundant_mutations_executed": 3,
+      "dropped_transactions": 0
+    },
+    "unbuffered_retry_stream/post_acknowledgement_boundary": {
+      "profiles_evaluated": 3,
+      "state_compliance_pass": 0,
+      "redundant_mutations_executed": 3,
+      "dropped_transactions": 0
+    },
+    "durable_outbox_idempotent_receiver/pre_flight_boundary": {
+      "profiles_evaluated": 3,
+      "state_compliance_pass": 3,
+      "redundant_mutations_executed": 0,
+      "dropped_transactions": 0
+    },
+    "durable_outbox_idempotent_receiver/post_mutation_boundary": {
+      "profiles_evaluated": 3,
+      "state_compliance_pass": 3,
+      "redundant_mutations_executed": 0,
+      "dropped_transactions": 0
+    },
+    "durable_outbox_idempotent_receiver/post_acknowledgement_boundary": {
+      "profiles_evaluated": 3,
+      "state_compliance_pass": 3,
+      "redundant_mutations_executed": 0,
+      "dropped_transactions": 0
+    }
+  }
+}

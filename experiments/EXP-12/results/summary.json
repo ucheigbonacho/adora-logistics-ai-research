@@ -1,0 +1,24 @@
+
+[
+  {
+    "delivery_strategy": "unbuffered_retry_stream",
+    "profiles_evaluated": 800,
+    "state_compliance_pass": 265,
+    "redundant_mutations_executed": 994,
+    "dropped_transactions": 0
+  },
+  {
+    "delivery_strategy": "volatile_pre_flight_registry",
+    "profiles_evaluated": 800,
+    "state_compliance_pass": 600,
+    "redundant_mutations_executed": 0,
+    "dropped_transactions": 200
+  },
+  {
+    "delivery_strategy": "durable_outbox_idempotent_receiver",
+    "profiles_evaluated": 800,
+    "state_compliance_pass": 800,
+    "redundant_mutations_executed": 0,
+    "dropped_transactions": 0
+  }
+]

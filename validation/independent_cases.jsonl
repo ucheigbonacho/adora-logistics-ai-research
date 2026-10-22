@@ -1,0 +1,34 @@
+{"experiment_id": "Q1-E01", "id": "Q1-E01-V01", "input": {"utterance": "road closed ahead"}, "expected": "authorize_intent"}
+{"experiment_id": "Q1-E01", "id": "Q1-E01-V02", "input": {"utterance": "please find another road"}, "expected": "authorize_intent"}
+{"experiment_id": "Q1-E01", "id": "Q1-E01-V03", "input": {"utterance": "can you hear me"}, "expected": "exception_flag"}
+{"experiment_id": "Q1-E01", "id": "Q1-E01-V04", "input": {"utterance": "I heard the road is closed?"}, "expected": "exception_flag"}
+{"experiment_id": "Q1-E01", "id": "Q1-E01-V05", "input": {"utterance": "alternate route"}, "expected": "authorize_intent"}
+{"experiment_id": "Q1-E01", "id": "Q1-E01-V06", "input": {"utterance": "route may be blocked"}, "expected": "exception_flag"}
+{"experiment_id": "Q1-E02", "id": "Q1-E02-V01", "input": {"connection": "restored", "pending": true, "confirmed": true}, "expected": "link_connected"}
+{"experiment_id": "Q1-E02", "id": "Q1-E02-V02", "input": {"connection": "restored", "pending": true, "confirmed": false}, "expected": "link_disconnected"}
+{"experiment_id": "Q1-E02", "id": "Q1-E02-V03", "input": {"connection": "restored", "pending": false, "confirmed": true}, "expected": "link_disconnected"}
+{"experiment_id": "Q1-E02", "id": "Q1-E02-V04", "input": {"connection": "lost", "pending": true, "confirmed": true}, "expected": "link_disconnected"}
+{"experiment_id": "Q2-E01", "id": "Q2-E01-V01", "input": {"available": true, "equipment_match": true, "hours_left": 5, "hours_needed": 4}, "expected": "assignment_authorized"}
+{"experiment_id": "Q2-E01", "id": "Q2-E01-V02", "input": {"available": true, "equipment_match": false, "hours_left": 5, "hours_needed": 4}, "expected": "resource_constraint_reject"}
+{"experiment_id": "Q2-E01", "id": "Q2-E01-V03", "input": {"available": true, "equipment_match": true, "hours_left": 2, "hours_needed": 4}, "expected": "resource_constraint_reject"}
+{"experiment_id": "Q2-E01", "id": "Q2-E01-V04", "input": {"available": false, "equipment_match": true, "hours_left": 5, "hours_needed": 4}, "expected": "resource_constraint_reject"}
+{"experiment_id": "Q2-E02", "id": "Q2-E02-V01", "input": {"destination": "Toronto", "trailer_class": "dry"}, "expected": "schema_validation_pass"}
+{"experiment_id": "Q2-E02", "id": "Q2-E02-V02", "input": {"destination": "", "trailer_class": "dry"}, "expected": "clarification_required"}
+{"experiment_id": "Q2-E02", "id": "Q2-E02-V03", "input": {"destination": "Toronto", "trailer_class": ""}, "expected": "clarification_required"}
+{"experiment_id": "Q2-E02", "id": "Q2-E02-V04", "input": {"destination": "", "trailer_class": ""}, "expected": "clarification_required"}
+{"experiment_id": "Q3-E01", "id": "Q3-E01-V01", "input": {"eta_min": 100, "appointment_min": 70, "freshness_sec": 30}, "expected": "delay_alert_triggered"}
+{"experiment_id": "Q3-E01", "id": "Q3-E01-V02", "input": {"eta_min": 100, "appointment_min": 70, "freshness_sec": 300}, "expected": "stale_telemetry_suppressed"}
+{"experiment_id": "Q3-E01", "id": "Q3-E01-V03", "input": {"eta_min": 75, "appointment_min": 70, "freshness_sec": 20}, "expected": "stale_telemetry_suppressed"}
+{"experiment_id": "Q3-E01", "id": "Q3-E01-V04", "input": {"eta_min": 90, "appointment_min": 70, "freshness_sec": 120}, "expected": "delay_alert_triggered"}
+{"experiment_id": "Q3-E02", "id": "Q3-E02-V01", "input": {"stopped_min": 90, "scheduled_stop": false}, "expected": "detention_billing_flag"}
+{"experiment_id": "Q3-E02", "id": "Q3-E02-V02", "input": {"stopped_min": 90, "scheduled_stop": true}, "expected": "manifest_stop_noop"}
+{"experiment_id": "Q3-E02", "id": "Q3-E02-V03", "input": {"stopped_min": 30, "scheduled_stop": false}, "expected": "manifest_stop_noop"}
+{"experiment_id": "Q3-E02", "id": "Q3-E02-V04", "input": {"stopped_min": 61, "scheduled_stop": true}, "expected": "manifest_stop_noop"}
+{"experiment_id": "Q4-E01", "id": "Q4-E01-V01", "input": {"recipient_verified": true, "destination_verified": true, "eta_delta_min": 30}, "expected": "notification_broadcast_authorized"}
+{"experiment_id": "Q4-E01", "id": "Q4-E01-V02", "input": {"recipient_verified": false, "destination_verified": true, "eta_delta_min": 30}, "expected": "uncommitted_state_suppression"}
+{"experiment_id": "Q4-E01", "id": "Q4-E01-V03", "input": {"recipient_verified": true, "destination_verified": false, "eta_delta_min": 30}, "expected": "uncommitted_state_suppression"}
+{"experiment_id": "Q4-E01", "id": "Q4-E01-V04", "input": {"recipient_verified": true, "destination_verified": true, "eta_delta_min": 10}, "expected": "uncommitted_state_suppression"}
+{"experiment_id": "Q4-E02", "id": "Q4-E02-V01", "input": {"event_key": "a", "seen_keys": []}, "expected": "transaction_committed"}
+{"experiment_id": "Q4-E02", "id": "Q4-E02-V02", "input": {"event_key": "a", "seen_keys": ["a"]}, "expected": "idempotency_filter_match"}
+{"experiment_id": "Q4-E02", "id": "Q4-E02-V03", "input": {"event_key": "b", "seen_keys": ["a"]}, "expected": "transaction_committed"}
+{"experiment_id": "Q4-E02", "id": "Q4-E02-V04", "input": {"event_key": "b", "seen_keys": ["b", "a"]}, "expected": "idempotency_filter_match"}
