@@ -12,7 +12,7 @@ class SafetyContractTests(unittest.TestCase):
     def test_route_proposal_request_does_not_authorize(self):
         self.assertEqual(
             execute_routing_decision("Q1-E01", {"utterance": "please find another road"}),
-            "exception_flag",
+            "route_proposal_requested",
         )
 
     def test_unknown_profile_rejected(self):
