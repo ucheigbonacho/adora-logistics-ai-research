@@ -85,6 +85,12 @@ class SignedLocalCoordinator:
     def reconcile_local(self, action_id, payload, now=None):
         if self.outbox.status(action_id) not in ("in_flight", "uncertain"):
             return "not_reconcilable"
+        # Never trust a caller-supplied payload during recovery.
+        import sqlite3
+        with sqlite3.connect(self.outbox.path, timeout=15) as db:
+            row = db.execute("SELECT payload_json FROM dispatch_outbox WHERE action_id=?", (action_id,)).fetchone()
+        if row is None or json.loads(row[0]) != payload:
+            return "payload_conflict"
         now = time.time() if now is None else now
         envelope = self.receiver.confirm(action_id, payload, expires_at=int(now)+60)
         if envelope is None:
