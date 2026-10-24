@@ -5,7 +5,8 @@ Development harness only. No network, TMS, or production action.
 import json
 import time
 
-from src.dispatch_outbox import DispatchOutbox, DisabledDispatchAdapter
+from src.dispatch_outbox import DisabledDispatchAdapter
+from src.atomic_dispatch_admission import AtomicDispatchAdmission
 from src.local_receiver import LocalDispatchReceiver
 from src.receipt_protocol import sign_receipt, verify_receipt
 from src.trusted_gateway import verify_claim
@@ -45,7 +46,8 @@ class SignedLocalCoordinator:
             raise ValueError("receiver verification secret required")
         if issuer_secret == receiver_secret:
             raise ValueError("issuer and receiver secrets must be distinct")
-        self.outbox = DispatchOutbox(outbox_path)
+        self.admission = AtomicDispatchAdmission(outbox_path, issuer_secret)
+        self.outbox = self.admission.outbox
         self.receiver = SignedLocalReceiver(receiver_path, receiver_secret)
         self._issuer_secret = issuer_secret
         self._receiver_secret = receiver_secret
@@ -57,9 +59,9 @@ class SignedLocalCoordinator:
                 "subject": claim["subject"]}
 
     def submit(self, claim, signature, now=None):
-        if not verify_claim(claim, signature, self._issuer_secret, now=now):
-            return "authorization_denied"
-        return self.outbox.enqueue(claim["action_id"], self._payload(claim))
+        outcome = self.admission.admit(claim, signature, now=now)
+        return {"admitted_pending": "pending", "duplicate_admission": "duplicate",
+                "action_id_conflict": "conflict"}.get(outcome, outcome)
 
     def _accept_verified(self, action_id, payload, envelope, now):
         if not verify_receipt(envelope, action_id, payload, self._receiver_secret, now=now):
