@@ -6,7 +6,7 @@ class SafetyContractTests(unittest.TestCase):
     def test_informational_question_does_not_authorize(self):
         self.assertEqual(
             execute_routing_decision("Q1-E01", {"utterance": "Is the road closed?"}),
-            "route_proposal_requested",
+            "informational_report",
         )
 
     def test_route_proposal_request_does_not_authorize(self):
