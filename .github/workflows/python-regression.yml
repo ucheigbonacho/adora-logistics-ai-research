@@ -21,3 +21,13 @@ jobs:
           python-version: '3.11'
       - name: Run regression tests
         run: python -m unittest discover -s tests -v
+      - name: Audit original 34 acceptance cases (non-gating)
+        run: python -m validation.audit_legacy_labels > legacy-label-audit.json
+      - name: Display compatibility summary
+        run: python -c "import json; d=json.load(open('legacy-label-audit.json')); print('Legacy compatibility: %s/%s' % (d['matches'], d['total'])); print('Mismatches:', ', '.join(x['id'] for x in d['mismatches']))"
+      - name: Archive read-only audit output
+        uses: actions/upload-artifact@v4
+        with:
+          name: legacy-label-audit
+          path: legacy-label-audit.json
+          retention-days: 90
