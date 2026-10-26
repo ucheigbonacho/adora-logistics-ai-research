@@ -21,8 +21,8 @@ class UserReportedQ1Tests(unittest.TestCase):
             path.write_text(original,encoding="utf-8")
             result=evaluate_user_reported(path)
             self.assertEqual(result["total"],6)
-            self.assertEqual(result["matches"],2)
-            self.assertEqual(len(result["mismatches"]),4)
+            self.assertEqual(result["matches"],6)
+            self.assertEqual(len(result["mismatches"]),0)
             self.assertIn("NOT_INDEPENDENT_VALIDATION",result["basis"])
             self.assertEqual(path.read_text(encoding="utf-8"),original)
 
