@@ -14,6 +14,6 @@ class Exp12ReproductionTests(unittest.TestCase):
             self.assertTrue((dest / "trials.csv").exists())
             self.assertTrue((dest / "manifest.json").exists())
             self.assertEqual(len(result["comparison"]), 3)
-            self.assertTrue(all(item["matches_original_published"] is False for item in result["comparison"]))
+            self.assertEqual([item["matches_original_published"] for item in result["comparison"]], [False, True, True])
             with self.assertRaises(FileExistsError):
                 reproduce(dest)
