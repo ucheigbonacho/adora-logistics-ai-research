@@ -42,7 +42,7 @@ def audit():
                 group["rows"] += 1
                 try:
                     group["passes"] += int(row[pass_field]) if row[pass_field] in ("0", "1") else int(row[pass_field].lower() == "true")
-                except (ValueError, TypeError):
+                except (ValueError, TypeError, AttributeError):
                     group["invalid_pass_values"] += 1
             entry["raw_aggregates"] = dict(groups)
         if summary_path:
