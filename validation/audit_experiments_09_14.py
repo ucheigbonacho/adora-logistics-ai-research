@@ -11,11 +11,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1] / "experiments"
 CONFIG = {
     "EXP-09": ("results.csv", "engine_strategy", "pass_status", None),
-    "EXP-10": ("results/trials.csv", "engine_strategy", "state_compliance_pass", "results/summary.json"),
+    "EXP-10": ("results/trials.csv", "strategy", "correct", "results/summary.json"),
     "EXP-11": ("results/trials.csv", "network_strategy", "state_compliance_pass", "results/summary.json"),
     "EXP-12": ("results/trials.csv", "delivery_strategy", "state_compliance_pass", "results/summary.json"),
     "EXP-13": ("results/http_requests.csv", None, None, "results/summary.json"),
-    "EXP-14": ("results/trials.csv", None, None, "results/summary.json"),
+    "EXP-14": ("results/trials.csv", "delivery_strategy", "state_compliance_pass", "results/summary.json"),
 }
 
 def audit():
@@ -27,8 +27,12 @@ def audit():
             report[exp] = {"status": "RAW_FILE_NOT_FOUND", "path": raw_path}
             continue
         with raw_file.open(newline="", encoding="utf-8-sig") as stream:
-            reader = csv.DictReader(stream)
-            columns = reader.fieldnames or []
+            if exp == "EXP-11":
+                columns = ["profile_id", "network_strategy", "state_compliance_pass", "external_mutations", "duplicate_actions", "collisions_intercepted", "sequence_errors", "sequence_index", "network_timeout"]
+                reader = csv.DictReader(stream, fieldnames=columns)
+            else:
+                reader = csv.DictReader(stream)
+                columns = reader.fieldnames or []
             rows = list(reader)
         entry = {"raw_path": raw_path, "rows": len(rows), "columns": columns}
         if group_field in columns and pass_field in columns:
@@ -37,7 +41,7 @@ def audit():
                 group = groups[row[group_field]]
                 group["rows"] += 1
                 try:
-                    group["passes"] += int(row[pass_field])
+                    group["passes"] += int(row[pass_field]) if row[pass_field] in ("0", "1") else int(row[pass_field].lower() == "true")
                 except (ValueError, TypeError):
                     group["invalid_pass_values"] += 1
             entry["raw_aggregates"] = dict(groups)
