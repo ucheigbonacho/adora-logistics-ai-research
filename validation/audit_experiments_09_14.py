@@ -28,7 +28,7 @@ def audit():
             continue
         with raw_file.open(newline="", encoding="utf-8-sig") as stream:
             if exp == "EXP-11":
-                columns = ["profile_id", "network_strategy", "state_compliance_pass", "external_mutations", "duplicate_actions", "collisions_intercepted", "sequence_errors", "sequence_index", "network_timeout"]
+                columns = ["profile_id", "network_strategy", "state_compliance_pass", "applied_actions", "duplicate_actions_executed", "concurrency_collisions_intercepted", "network_timeout_exceptions", "synchronized_sequence_index", "packet_acknowledgement_timeouts"]
                 reader = csv.DictReader(stream, fieldnames=columns)
             else:
                 reader = csv.DictReader(stream)
