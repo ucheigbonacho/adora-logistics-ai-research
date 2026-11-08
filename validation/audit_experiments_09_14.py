@@ -35,6 +35,11 @@ def audit():
                 columns = reader.fieldnames or []
             rows = [row for row in reader if any(value is not None and str(value).strip() for value in row.values())]
         entry = {"raw_path": raw_path, "rows": len(rows), "columns": columns}
+        if exp == "EXP-11":
+            keys = collections.Counter((row["profile_id"], row["network_strategy"]) for row in rows)
+            entry["unique_profile_strategy_pairs"] = len(keys)
+            entry["repeated_profile_strategy_pairs"] = sum(count > 1 for count in keys.values())
+            entry["recorded_profile_id_range"] = [min(int(row["profile_id"]) for row in rows), max(int(row["profile_id"]) for row in rows)]
         if group_field in columns and pass_field in columns:
             groups = collections.defaultdict(lambda: {"rows": 0, "passes": 0, "invalid_pass_values": 0})
             for row in rows:
