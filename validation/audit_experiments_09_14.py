@@ -33,7 +33,7 @@ def audit():
             else:
                 reader = csv.DictReader(stream)
                 columns = reader.fieldnames or []
-            rows = list(reader)
+            rows = [row for row in reader if any(value is not None and str(value).strip() for value in row.values())]
         entry = {"raw_path": raw_path, "rows": len(rows), "columns": columns}
         if group_field in columns and pass_field in columns:
             groups = collections.defaultdict(lambda: {"rows": 0, "passes": 0, "invalid_pass_values": 0})
