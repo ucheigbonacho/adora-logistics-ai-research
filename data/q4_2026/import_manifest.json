@@ -1,0 +1,30 @@
+{
+  "classification": "OWNER_CONFIRMED_ACTUAL_Q4_NOVEMBER_2026_OPERATIONAL_TEST_RECORDS",
+  "original_file_name": "Q4_November_2026_Actual_Records.txt",
+  "source_file_sha256": "c9a80ff0681eab1faf28457c4445745bd0917dcb743c22016cdd859900b1a659",
+  "record_count": 10,
+  "case_ids": [
+    "PL-Q3-RUN-001",
+    "PL-Q3-RUN-002",
+    "PL-Q3-RUN-003",
+    "PL-Q3-RUN-004",
+    "PL-Q3-RUN-005",
+    "PL-Q3-RUN-006",
+    "PL-Q3-RUN-007",
+    "PL-Q3-RUN-008",
+    "PL-Q3-RUN-009",
+    "PL-Q3-RUN-010"
+  ],
+  "recorded_outcomes": {
+    "escalate": 5,
+    "routine": 5
+  },
+  "original_bytes_preserved": true,
+  "source_provenance": "Owner-confirmed actual Q4 November 2026 operational/test records; independent source-system verification pending",
+  "repository_dataset_path": "data/q4_2026/actual_november_records.jsonl",
+  "notes": [
+    "Original PL-Q3-RUN prefixes preserved; timestamps are November 2026",
+    "Separate Python generator excluded",
+    "Recorded operational outcomes are not independently reviewed authorization labels"
+  ]
+}
