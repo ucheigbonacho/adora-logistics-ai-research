@@ -8,7 +8,7 @@ The following four people were identified by the project sponsor on November 10,
 3. Arashdeep Singh
 4. Alhassan Mahdi
 
-**Evidence status:** Names and general fieldwork association supplied by the sponsor; specific job titles, dates, hours, duties, payroll/contractor status, locations, individual experiment contributions, and source records have **not** yet been independently verified. Do not infer these details or treat this entry as contemporaneous proof of earlier work.
+**Sponsor clarification (November 10, 2026):** The sponsor confirms that **all four named personnel participated in experimental testing**, rather than solely routine trucking operations. This is a sponsor statement about participation, not yet an independently corroborated mapping of individual activities to experiment IDs or test dates.\n\n**Evidence status:** Names and experimental participation supplied by the sponsor; specific job titles, dates, hours, duties, payroll/contractor status, locations, individual experiment contributions, and source records have **not** yet been independently verified. Do not infer these details or treat this entry as contemporaneous proof of earlier work.
 
 ## Required person-to-experiment attribution
 For each person, obtain actual available source records showing:
@@ -26,4 +26,4 @@ Do not backdate timesheets, manufacture individual contributions, assign invente
 Personnel identification supports factual work attribution but does not automatically make routine JEVEEB field operations SR&ED, nor does it establish Poulina's entitlement to claim a particular expenditure. The claimant, contract terms, location of work, applicable contractor rules and actual eligible expenditure records require separate review.
 
 ## Next verification step
-Request an actual person-by-person mapping of fieldwork to EXP-09 through EXP-16, supported by existing source records; record gaps rather than filling them with assumptions.
+Request an actual person-by-person mapping of experimental testing to EXP-09 through EXP-16, supported by existing source records; record gaps rather than filling them with assumptions.
